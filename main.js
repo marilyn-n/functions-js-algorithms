@@ -8,6 +8,7 @@ const reverseNumbers = (number) => {
   return result;
 };
 
+// TEST
 reverseNumbers(32243);
 
 // 2. Write a JavaScript function which accepts an argument and returns the type.
@@ -16,6 +17,7 @@ reverseNumbers(32243);
 
 const typeOfExpression = value => typeof value;
 
+// TEST
 console.log(typeOfExpression({})); // object
 console.log(typeOfExpression(false)); // boolean
 console.log(typeOfExpression(() => {})); // function
@@ -33,17 +35,27 @@ const longestWord = (str) => {
   return result[0];
 };
 
+// TEST
 longestWord('Simple Algorithms');
 
-// 4. Write a JavaScript function that generates all combinations of a string.
+// 4. Write a JavaScript function that returns a passed string with letters in alphabetical order.
+// Example string : 'webmast er'
+// Expected Output : 'abeemrstw'
+// Assume punctuation and numbers symbols are not included in the passed string.
+
+const alphabeticalOrder = (str) => {
+  const splitStr = str.split('');
+  const result = splitStr.sort((a, b) => a > b).join('');
+  return result;
+};
+
+// TEST
+alphabeticalOrder('webmaster');
+
+// 5. Write a JavaScript function that generates all combinations of a string.
 // Example string : 'dog'
 // Expected Output : d,do,dog,o,og,g
 
 // const stringCombinations = (str) => {
 // };
 // stringCombinations('dog');
-
-// 5. Write a JavaScript function that returns a passed string with letters in alphabetical order.
-// Example string : 'webmast er'
-// Expected Output : 'abeemrstw'
-// Assume punctuation and numbers symbols are not included in the passed string.
