@@ -23,19 +23,25 @@ console.log(typeOfExpression(34)); // number
 console.log(typeOfExpression('hello world')); // string
 console.log(typeOfExpression()); // undefined
 
-// 3. Write a JavaScript function that generates all combinations of a string.
+// 3. Write a JavaScript function that accepts a string as a parameter and find the longest word
+// within the string.
+// Expected Output : 'Development'
+
+const longestWord = (str) => {
+  const words = str.split(' ');
+  const result = words.sort((a, b) => a.length < b.length);
+  return result[0];
+};
+
+longestWord('Simple Algorithms');
+
+// 4. Write a JavaScript function that generates all combinations of a string.
 // Example string : 'dog'
 // Expected Output : d,do,dog,o,og,g
 
 // const stringCombinations = (str) => {
 // };
 // stringCombinations('dog');
-
-
-// 4. Write a JavaScript function that accepts a string as a parameter and find the longest word
-// within the string.
-// Example string : 'Web Development Tutorial'
-// Expected Output : 'Development'
 
 // 5. Write a JavaScript function that returns a passed string with letters in alphabetical order.
 // Example string : 'webmast er'
