@@ -36,7 +36,7 @@ const longestWord = (str) => {
 };
 
 // TEST
-longestWord('Simple Algorithms');
+console.log(longestWord('Simple Algorithms'));
 
 // 4. Write a JavaScript function that returns a passed string with letters in alphabetical order.
 // Example string : 'webmast er'
@@ -50,12 +50,20 @@ const alphabeticalOrder = (str) => {
 };
 
 // TEST
-alphabeticalOrder('webmaster');
+console.log(alphabeticalOrder('webmaster'));
 
 // 5. Write a JavaScript function that generates all combinations of a string.
 // Example string : 'dog'
 // Expected Output : d,do,dog,o,og,g
 
-// const stringCombinations = (str) => {
-// };
-// stringCombinations('dog');
+const strCombinator = (str) => {
+  const combinations = [];
+  for (let i = 0; i < str.length; i++) {
+    for (let j = i + 1; j < str.length + 1; j++) {
+      combinations.push(str.slice(i, j));
+    }
+  }
+  return combinations;
+};
+
+console.log(strCombinator('dog'));
